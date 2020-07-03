@@ -1,0 +1,36 @@
+6a7,20
+> ## Brazil
+> Server = http://linorg.usp.br/archlinux/$repo/os/$arch
+> ## Brazil
+> Server = http://www.caco.ic.unicamp.br/archlinux/$repo/os/$arch
+> ## Brazil
+> Server = http://archlinux.c3sl.ufpr.br/$repo/os/$arch
+> ## Brazil
+> Server = http://archlinux.pop-es.rnp.br/$repo/os/$arch
+> ## Brazil
+> Server = http://mirror.ufscar.br/archlinux/$repo/os/$arch
+> ## Brazil
+> Server = http://mirror.ufam.edu.br/archlinux/$repo/os/$arch
+> ## Brazil
+> Server = http://br.mirror.archlinux-br.org/$repo/os/$arch
+141,142d154
+< ## Brazil
+< Server = http://linorg.usp.br/archlinux/$repo/os/$arch
+207,208d218
+< ## Brazil
+< Server = http://www.caco.ic.unicamp.br/archlinux/$repo/os/$arch
+255,256d264
+< ## Brazil
+< Server = http://archlinux.c3sl.ufpr.br/$repo/os/$arch
+285,286d292
+< ## Brazil
+< Server = http://archlinux.pop-es.rnp.br/$repo/os/$arch
+301,302d306
+< ## Brazil
+< Server = http://mirror.ufscar.br/archlinux/$repo/os/$arch
+373,374d376
+< ## Brazil
+< Server = http://mirror.ufam.edu.br/archlinux/$repo/os/$arch
+377,378d378
+< ## Brazil
+< Server = http://br.mirror.archlinux-br.org/$repo/os/$arch

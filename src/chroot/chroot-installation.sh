@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Sudo and user password
+_password="123"
+
 # Time
 ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 hwclock --systohc
@@ -17,16 +20,22 @@ echo "::1                  localhost" >> /etc/hosts
 echo "127.0.0.1 myhostname.localdomain myhostname" >> /etc/hosts
 
 # Passwords and new user
-passwd "123123"
+passwd << EOF
+$_password
+$_password
+EOF
 useradd -m -g users -G wheel -s /bin/bash user
-passwd user "123123"
+passwd user << EOF
+$_password
+$_password
+EOF
 
 echo " + A senha e 123123"
 
-echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
+echo "user ALL=(ALL) ALL" >> /etc/sudoers
 
 # General packages
-pacman -S networkmanager network-manager-applet dosfstools wireless-tools dialog grub
+pacman -S networkmanager network-manager-applet dosfstools wireless_tools dialog grub --noconfirm
 
 # Grub install
 grub-install --target=i386-pc --recheck /dev/sda

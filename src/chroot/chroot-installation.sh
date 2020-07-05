@@ -35,7 +35,7 @@ echo " + A senha e 123123"
 echo "user ALL=(ALL) ALL" >> /etc/sudoers
 
 # General packages
-pacman -S networkmanager network-manager-applet dosfstools wireless_tools dialog grub --noconfirm
+pacman -S networkmanager network-manager-applet dosfstools wireless_tools wpa_supplicant wpa_actiond dialog grub --noconfirm
 
 # Grub install
 grub-install --target=i386-pc --recheck /dev/sda

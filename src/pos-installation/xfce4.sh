@@ -20,11 +20,9 @@ localectl set-x11-keymap br abnt2
 systemctl enable lightdm
 
 # The main background
-rm /usr/share/backgrounds/xfce/xfce-stripes.png
-
 pacman -S wget --noconfirm
 wget https://i.imgur.com/xLc7V7B.jpg
-cp xLc7V7B.jpg /usr/share/backgrounds/xfce/xfce-stripes.png
+cp xLc7V7B.jpg /usr/share/backgrounds/xfce/think-plan-execute.jpeg
 rm xLc7V7B.jpg
 
 # The second background

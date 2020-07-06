@@ -1,0 +1,10 @@
+51c51
+< #background=
+---
+> background=/usr/share/backgrounds/xfce/deer.jpeg
+53,54c53,54
+< #theme-name=
+< #icon-theme-name=
+---
+> theme-name=Adwaita-dark
+> icon-theme-name=Papirus-Dark

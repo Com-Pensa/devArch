@@ -36,6 +36,13 @@ mkfs.ext4 $_bar && mount $_bar /mnt
 echo " + Formatando e montando o Swap;"
 mkswap $_swap && swapon $_swap
 
+# Mirrors
+rm /etc/pacman.d/mirrorlist
+
+wget https://raw.githubusercontent.com/Com-Pensa/devArch/master/src/installation/br-mirrors
+cp br-mirrors /etc/pacman.d/mirrorlist
+rm br-mirrors
+
 echo " + Instalando a base do sistema;"
 pacstrap /mnt linux linux-firmware base base-devel
 
@@ -52,5 +59,4 @@ rm /mnt/chroot-installation.sh
 echo " + Desmontando particoes;"
 umount -R /mnt
 
-shutdown -r
 exit

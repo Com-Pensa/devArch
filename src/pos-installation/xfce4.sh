@@ -6,8 +6,10 @@ pacman -S xf86-video-intel xf86-input-synaptics xf86-input-libinput libgl mesa -
 pacman -S xfce4 xfce4-goodies --noconfirm
 pacman -S lightdm lightdm-gtk-greeter --noconfirm
 
-pacman -S tilix git code --noconfirm
-pacman -S chromium --noconfirm
+pacman -S papirus-icon-theme --noconfirm
+
+pacman -S tilix nemo regexxer chromium --noconfirm
+pacman -S git code --noconfirm
 
 # Audio
 pacman -S alsa-utils pulseaudio paprefs pavucontrol --noconfirm
@@ -17,12 +19,21 @@ localectl set-x11-keymap br abnt2
 
 systemctl enable lightdm
 
-# The background
+# The main background
 rm /usr/share/backgrounds/xfce/xfce-stripes.png
 
 pacman -S wget --noconfirm
 wget https://i.imgur.com/xLc7V7B.jpg
 cp xLc7V7B.jpg /usr/share/backgrounds/xfce/xfce-stripes.png
-
 rm xLc7V7B.jpg
+
+# The second background
+wget https://i.imgur.com/EQeG7HR.jpeg
+cp EQeG7HR.jpeg /usr/share/backgrounds/xfce/deer.jpeg
+rm EQeG7HR.jpeg
+
+wget https://raw.githubusercontent.com/Com-Pensa/devArch/master/src/pos-installation/lightdm.patch
+pacth /etc/lightdm/lightdm-gtk-greeter.conf < lightdm.pacth
+
+rm lightdm.patch
 pacman -R wget

@@ -22,7 +22,7 @@ rm /usr/share/backgrounds/xfce/xfce-stripes.png
 
 pacman -S wget --noconfirm
 wget https://i.imgur.com/xLc7V7B.jpg
-cp xLc7V7B.jpg /usr/share/backgrounds/xfce/xfce-stripes.jpg
+cp xLc7V7B.jpg /usr/share/backgrounds/xfce/xfce-stripes.png
 
 rm xLc7V7B.jpg
 pacman -R wget
